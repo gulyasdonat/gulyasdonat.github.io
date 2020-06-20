@@ -6,7 +6,7 @@
     <title>Klánháború</title>
     <link rel="stylesheet" href="index.css">
 </head>
-<body>
+<body onload="pontszamitas()">
     <div class="nav">
         <ul>
             <li>Áttekintés</li>
@@ -24,116 +24,117 @@
         <tr>
             <td><a href="buildings/fohadiszallas.html">Főhadiszállás</a></td>
             <td id="fohadiszallas-e-b">0</td>
-            <td><button onclick="fohadiszallasepites()">Építés</button>
-                <button onclick="fohadiszallasbontas()">Bontás</button>
+            <td><button onclick="fohadiszallasepites(); pontszamitas()">Építés</button>
+                <button onclick="fohadiszallasbontas(); pontszamitas()">Bontás</button>
             </td>
         </tr>
         <tr>
             <td><a href="buildings/barakk.html">Barakk</a></td>      
             <td id="barakk-e-b">0</td>  
-            <td><button onclick="barakkepites()">Építés</button>
-                <button onclick="barakkbontas()">Bontás</button>
+            <td><button onclick="barakkepites(); pontszamitas()">Építés</button>
+                <button onclick="barakkbontas(); pontszamitas()">Bontás</button>
             </td>
         </tr>
         <tr>
             <td><a href="buildings/istallo.html">Istálló</a></td>
             <td id="istallo-e-b">0</td>    
-            <td><button onclick="istalloepites()">Építés</button>
-                <button onclick="istallobontas()">Bontás</button>
+            <td><button onclick="istalloepites(); pontszamitas()">Építés</button>
+                <button onclick="istallobontas(); pontszamitas()">Bontás</button>
             </td>
         </tr>
         <tr>
             <td><a href="buildings/muhely.html">Műhely</a></td>
             <td id="muhely-e-b">0</td>
-            <td><button onclick="muhelyepites()">Építés</button>
-                <button onclick="muhelybontas()">Bontás</button>
+            <td><button onclick="muhelyepites(); pontszamitas()">Építés</button>
+                <button onclick="muhelybontas(); pontszamitas()">Bontás</button>
             </td>
         </tr>
         <tr>
             <td><a href="buildings/akademia.html">Akadémia</a></td>
             <td id="akademia-e-b">0</td>
-            <td><button onclick="akademiaepites()">Építés</button>
-                <button onclick="akademiabontas()">Bontás</button>
+            <td><button onclick="akademiaepites(); pontszamitas()">Építés</button>
+                <button onclick="akademiabontas(); pontszamitas()">Bontás</button>
             </td>
         </tr>
         <tr>
             <td><a href="buildings/kovacsmuhely.html">Kovácsműhely</a></td>
             <td id="kovacsmuhely-e-b">0</td>
-            <td><button onclick="kovacsmuhelyepites()">Építés</button>
-                <button onclick="kovacsmuhelybontas()">Bontás</button>
+            <td><button onclick="kovacsmuhelyepites(); pontszamitas()">Építés</button>
+                <button onclick="kovacsmuhelybontas(); pontszamitas()">Bontás</button>
             </td>
         </tr>
         <tr>
             <td><a href="buildings/gyulekezohely.html">Gyülekezőhely</a></td>
             <td id="gyulekezohely-e-b">0</td>
-            <td><button onclick="gyulekezohelyepites()">Építés</button>
-                <button onclick="gyulekezohelybontas()">Bontás</button>
+            <td><button onclick="gyulekezohelyepites(); pontszamitas()">Építés</button>
+                <button onclick="gyulekezohelybontas(); pontszamitas()">Bontás</button>
             </td>
         </tr>
         <tr>
             <td><a href="buildings/szobor.html">Szobor</a></td>
             <td id="szobor-e-b">0</td>
-            <td><button onclick="szoborepites()">Építés</button>
-                <button onclick="szoborbontas()">Bontás</button>
+            <td><button onclick="szoborepites(); pontszamitas()">Építés</button>
+                <button onclick="szoborbontas(); pontszamitas()">Bontás</button>
             </td>
         </tr>
         <tr>
             <td><a href="buildings/piac.html">Piac</a></td>
             <td id="piac-e-b">0</td>
-            <td><button onclick="piacepites()">Építés</button>
-                <button onclick="piacbontas()">Bontás</button>
+            <td><button onclick="piacepites(); pontszamitas()">Építés</button>
+                <button onclick="piacbontas(); pontszamitas()">Bontás</button>
             </td>
         </tr>
         <tr>
             <td><a href="buildings/fatelep.html">Fatelep</a></td>
             <td id="fatelep-e-b">0</td>
-            <td><button onclick="fatelepepites()">Építés</button>
-                <button onclick="fatelepbontas()">Bontás</button>
+            <td><button onclick="fatelepepites(); pontszamitas()">Építés</button>
+                <button onclick="fatelepbontas(); pontszamitas()">Bontás</button>
             </td>
         </tr>
         <tr>
             <td><a href="buildings/agyagbanya.html">Agyagbánya</a></td>
             <td id="agyagbanya-e-b">0</td>
-            <td><button onclick="agyagbanyaepites()">Építés</button>
-                <button onclick="agyagbanyabontas()">Bontás</button>
+            <td><button onclick="agyagbanyaepites(); pontszamitas()">Építés</button>
+                <button onclick="agyagbanyabontas(); pontszamitas()">Bontás</button>
             </td>
         </tr>
         <tr>
             <td><a href="buildings/vasbanya.html">Vasbánya</a></td>
             <td id="vasbanya-e-b">0</td>
-            <td><button onclick="vasbanyaepites()">Építés</button>
-                <button onclick="vasbanyabontas()">Bontás</button>
+            <td><button onclick="vasbanyaepites(); pontszamitas()">Építés</button>
+                <button onclick="vasbanyabontas(); pontszamitas()">Bontás</button>
             </td>
         </tr>
         <tr>
             <td><a href="buildings/tanya.html">Tanya</a></td>
             <td id="tanya-e-b">0</td>
-            <td><button onclick="tanyaepites()">Építés</button>
-                <button onclick="tanyabontas()">Bontás</button>
+            <td><button onclick="tanyaepites(); pontszamitas()">Építés</button>
+                <button onclick="tanyabontas(); pontszamitas()">Bontás</button>
             </td>
         </tr>
         <tr>
             <td><a href="buildings/raktar.html">Raktár</a></td>
             <td id="raktar-e-b">0</td>
-            <td><button onclick="raktarepites()">Építés</button>
-                <button onclick="raktarbontas()">Bontás</button>
+            <td><button onclick="raktarepites(); pontszamitas()">Építés</button>
+                <button onclick="raktarbontas(); pontszamitas()">Bontás</button>
             </td>
         </tr>
         <tr>
             <td><a href="buildings/rejtekhely.html">Rejtekhely</a></td>
             <td id="rejtekhely-e-b">0</td>
-            <td><button onclick="rejtekhelyepites()">Építés</button>
-                <button onclick="rejtekhelybontas()">Bontás</button>
+            <td><button onclick="rejtekhelyepites(); pontszamitas()">Építés</button>
+                <button onclick="rejtekhelybontas(); pontszamitas()">Bontás</button>
             </td>
         </tr>
         <tr>
             <td><a href="buildings/fal.html">Fal</a></td>
             <td id="fal-e-b">0</td>
-            <td><button onclick="falepites()">Építés</button>
-                <button onclick="falbontas()">Bontás</button>
+            <td><button onclick="falepites(); pontszamitas()">Építés</button>
+                <button onclick="falbontas(); pontszamitas()">Bontás</button>
             </td>
         </tr>
     </table>
-    <script src="epites-bontas.js"></script>
+    <script src="js/epites-bontas.js"></script>
+    <script src="js/pontok.js"></script>
 </body>
 </html>
