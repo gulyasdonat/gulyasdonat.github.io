@@ -17,6 +17,17 @@ function pontszamitas() {
     var raktarlevel = document.getElementById('raktar-e-b').innerHTML;
     var rejtekhelylevel = document.getElementById('rejtekhely-e-b').innerHTML;
     var fallevel = document.getElementById('fal-e-b').innerHTML;
+    
+    fetch('resources/epuletponttablazat.txt')
+    .then(response => response.text())
+    .then(text => console.log(text))
+  // outputs the content of the text file
+
+
+
+
+
+
     /*if (fohadiszallaslevel >= 0) {
         ponts = fohadiszallaslevel*100;
     };*/
