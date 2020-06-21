@@ -1,26 +1,54 @@
 function fohadiszallasepites() {
     var epit = document.getElementById('fohadiszallas-e-b').innerHTML;
-    epit++;
-    epit2=Math.min(epit,30);
-    document.getElementById('fohadiszallas-e-b').innerHTML=epit2;
+    if (epit==29){
+        document.getElementById("fohadiszallas-e-btn").disabled=true;
+        epit++;
+        document.getElementById('fohadiszallas-e-b').innerHTML=epit;
+    }
+    else {
+        epit++;
+        document.getElementById('fohadiszallas-e-b').innerHTML=epit;
+        document.getElementById("fohadiszallas-b-btn").disabled=false;
+    }  
 }
 function fohadiszallasbontas() {
     var bont = document.getElementById('fohadiszallas-e-b').innerHTML;
-    bont--;
-    bont2=Math.max(bont,0);
-    document.getElementById('fohadiszallas-e-b').innerHTML=bont2;
+    if (bont==1){
+        document.getElementById("fohadiszallas-b-btn").disabled=true;
+        bont--;
+        document.getElementById('fohadiszallas-e-b').innerHTML=bont;
+    }
+    else {
+        bont--;
+        document.getElementById('fohadiszallas-e-b').innerHTML=bont;
+        document.getElementById("fohadiszallas-e-btn").disabled=false;
+    }
 }
 function barakkepites() {
     var epit = document.getElementById('barakk-e-b').innerHTML;
-    epit++;
-    epit2=Math.min(epit,25);
-    document.getElementById('barakk-e-b').innerHTML=epit2;
+    if (epit==24){
+        document.getElementById("barakk-e-btn").disabled=true;
+        epit++;
+        document.getElementById('barakk-e-b').innerHTML=epit;
+    }
+    else {
+        epit++;
+        document.getElementById('barakk-e-b').innerHTML=epit;
+        document.getElementById("barakk-b-btn").disabled=false;
+    } 
 }
 function barakkbontas() {
     var bont = document.getElementById('barakk-e-b').innerHTML;
-    bont--;
-    bont2=Math.max(bont,0);
-    document.getElementById('barakk-e-b').innerHTML=bont2;
+    if (bont==1){
+        document.getElementById("barakk-b-btn").disabled=true;
+        bont--;
+        document.getElementById('barakk-e-b').innerHTML=bont;
+    }
+    else {
+        bont--;
+        document.getElementById('barakk-e-b').innerHTML=bont;
+        document.getElementById("barakk-e-btn").disabled=false;
+    }
 }
 function istalloepites() {
     var epit = document.getElementById('istallo-e-b').innerHTML;
