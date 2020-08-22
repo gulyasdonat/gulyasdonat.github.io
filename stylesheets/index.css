@@ -2,13 +2,10 @@ body {
   background-image: url(https://dshu.innogamescdn.com/asset/1d2499b/graphic/background/bg-image.jpg);
   margin: 0;
 }
-head {
-  display: none;
-}
 .nav ul {
   list-style-type: none;
   text-align: center;
-  padding: 0px;
+  padding-top: 14px;
   margin: 0;
 }
 .nav ul li {
@@ -17,25 +14,16 @@ head {
   font-size: 1.2rem;
   color: aliceblue;
 }
+.nav ul li a {
+  color: aliceblue;
+}
 .nav {
   background-image: url(https://dshu.innogamescdn.com/asset/1d2499b/graphic/index/topbar-main.png);
   height: 57px;
-  
 }
-a {
-  text-decoration: none;
-  color: black;
-}
-a:hover {
-  border: black solid 1px;
-}
-table {
-  width: 100%;
-}
-td {
+.buildings tr td {
   text-align: center;
-  width: 33%;
 }
-tr:nth-child(even) {
-  background-color: #f2f2f2;
+.buildings {
+  background-color: moccasin;
 }
