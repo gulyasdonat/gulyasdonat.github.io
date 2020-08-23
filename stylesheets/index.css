@@ -27,3 +27,13 @@ body {
 .buildings {
   background-color: moccasin;
 }
+.left {
+  background: url(https://dshu.innogamescdn.com/asset/1d2499b/graphic/index/mainborder-left.png);
+  background-position: right;
+  background-repeat: repeat-y;
+}
+.right {
+  background: url(https://dshu.innogamescdn.com/asset/1d2499b/graphic/index/mainborder-right.png);
+  background-position: left;
+  background-repeat: repeat-y;
+}
