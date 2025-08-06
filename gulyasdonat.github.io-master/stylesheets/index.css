@@ -1,0 +1,39 @@
+body {
+  background-image: url(https://dshu.innogamescdn.com/asset/1d2499b/graphic/background/bg-image.jpg);
+  margin: 0;
+}
+.nav ul {
+  list-style-type: none;
+  text-align: center;
+  padding-top: 14px;
+  margin: 0;
+}
+.nav ul li {
+  display: inline-block;
+  padding: 0px 20px;
+  font-size: 1.2rem;
+  color: aliceblue;
+}
+.nav ul li a {
+  color: aliceblue;
+}
+.nav {
+  background-image: url(https://dshu.innogamescdn.com/asset/1d2499b/graphic/index/topbar-main.png);
+  height: 57px;
+}
+.buildings tr td {
+  text-align: center;
+}
+.buildings {
+  background-color: moccasin;
+}
+.left {
+  background: url(https://dshu.innogamescdn.com/asset/1d2499b/graphic/index/mainborder-left.png);
+  background-position: right;
+  background-repeat: repeat-y;
+}
+.right {
+  background: url(https://dshu.innogamescdn.com/asset/1d2499b/graphic/index/mainborder-right.png);
+  background-position: left;
+  background-repeat: repeat-y;
+}

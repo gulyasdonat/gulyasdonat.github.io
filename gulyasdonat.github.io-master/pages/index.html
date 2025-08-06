@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klánháború</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="../stylesheets/index.css">
+</head>
+<body onload="pontszamitas(); epuletbontasellenorzes()">
+    <div class="nav row">
+        <ul class="col">
+            <li><a href="overview.html">Áttekintés</a></li>
+            <li><a href="map.html">Térkép</a></li>
+            <li><a href="reports.html">Jelentések</a></li>
+            <li><a href="messages.html">Üzenetek</a></li>
+            <li id="ranglista-pontok"><a href="ranking.html">Ranglista(1.|0 P)</a></li>
+            <li><a href="clan.html">Klán</a></li>
+            <li><a href="profile.html">Profil</a></li>
+            <li><a href="premium.html">PP</a></li>
+            <li><a href="settings.html">Beállítások</a></li>
+        </ul>
+    </div>
+    <div class="row">
+        <div class="left col-2"></div>
+        <table class="buildings col-8">
+            <tr class="row">
+                <td class="col"><a href="buildings/fohadiszallas.html">
+                    <img src="https://dshu.innogamescdn.com/asset/1d2499b/graphic/buildings/mid/main3.png" 
+                    title="Főhadiszállás" alt="">
+                    Főhadiszállás</a></td>
+                <td class="col" id="fohadiszallas-e-b">0</td>
+                <td class="col"><button id="fohadiszallas-e-btn" onclick="fohadiszallasepites(); pontszamitas()">Építés</button>
+                    <button id="fohadiszallas-b-btn" onclick="fohadiszallasbontas(); pontszamitas()">Bontás</button>
+                </td>
+            </tr>
+            <tr class="row">
+                <td class="col"><a href="buildings/barakk.html">
+                    <img src="https://dshu.innogamescdn.com/asset/1d2499b/graphic/buildings/mid/barracks3.png" 
+                    title="Barakk" alt="" class="bmain_list_img">
+                    Barakk</a></td>      
+                <td class="col" id="barakk-e-b">0</td>  
+                <td class="col"><button id="barakk-e-btn" onclick="barakkepites(); pontszamitas()">Építés</button>
+                    <button id="barakk-b-btn" onclick="barakkbontas(); pontszamitas()">Bontás</button>
+                </td>
+            </tr>
+            <tr class="row">
+                <td class="col"><a href="buildings/istallo.html">
+                    <img src="https://dshu.innogamescdn.com/asset/1d2499b/graphic/buildings/mid/stable3.png" 
+                    title="Istálló" alt="" class="bmain_list_img">
+                    Istálló</a></td>
+                <td class="col" id="istallo-e-b">0</td>    
+                <td class="col"><button id="istallo-e-btn" onclick="istalloepites(); pontszamitas()">Építés</button>
+                    <button id="istallo-b-btn" onclick="istallobontas(); pontszamitas()">Bontás</button>
+                </td>
+            </tr>
+            <tr class="row">
+                <td class="col"><a href="buildings/muhely.html">
+                    <img src="https://dshu.innogamescdn.com/asset/1d2499b/graphic/buildings/mid/garage2.png" 
+                    title="Műhely" alt="" class="bmain_list_img">
+                    Műhely</a></td>
+                <td class="col" id="muhely-e-b">0</td>
+                <td class="col"><button id="muhely-e-btn" onclick="muhelyepites(); pontszamitas()">Építés</button>
+                    <button id="muhely-b-btn" onclick="muhelybontas(); pontszamitas()">Bontás</button>
+                </td>
+            </tr>
+            <tr class="row">
+                <td class="col"><a href="buildings/akademia.html">
+                    <img src="https://dshu.innogamescdn.com/asset/1d2499b/graphic/buildings/mid/snob1.png" 
+                    title="Akadémia" alt="" class="bmain_list_img">
+                    Akadémia</a></td>
+                <td class="col" id="akademia-e-b">0</td>
+                <td class="col"><button id="akademia-e-btn" onclick="akademiaepites(); pontszamitas()">Építés</button>
+                    <button id="akademia-b-btn" onclick="akademiabontas(); pontszamitas()">Bontás</button>
+                </td>
+            </tr>
+            <tr class="row">
+                <td class="col"><a href="buildings/kovacsmuhely.html">
+                    <img src="https://dshu.innogamescdn.com/asset/1d2499b/graphic/buildings/mid/smith3.png" 
+                    title="Kovácsműhely" alt="" class="bmain_list_img">
+                    Kovácsműhely</a></td>
+                <td class="col" id="kovacsmuhely-e-b">0</td>
+                <td class="col"><button id="kovacsmuhely-e-btn" onclick="kovacsmuhelyepites(); pontszamitas()">Építés</button>
+                    <button id="kovacsmuhely-b-btn" onclick="kovacsmuhelybontas(); pontszamitas()">Bontás</button>
+                </td>
+            </tr>
+            <tr class="row">
+                <td class="col"><a href="buildings/gyulekezohely.html">
+                    <img src="https://dshu.innogamescdn.com/asset/1d2499b/graphic/buildings/mid/place1.png" 
+                    title="Gyülekezőhely" alt="" class="bmain_list_img">
+                    Gyülekezőhely</a></td>
+                <td class="col" id="gyulekezohely-e-b">0</td>
+                <td class="col"><button id="gyulekezohely-e-btn" onclick="gyulekezohelyepites(); pontszamitas()">Építés</button>
+                    <button id="gyulekezohely-b-btn" onclick="gyulekezohelybontas(); pontszamitas()">Bontás</button>
+                </td>
+            </tr>
+            <tr class="row">
+                <td class="col"><a href="buildings/szobor.html">
+                    <img src="https://dshu.innogamescdn.com/asset/1d2499b/graphic/buildings/mid/statue1.png" 
+                    title="Szobor" alt="" class="bmain_list_img">
+                    Szobor</a></td>
+                <td class="col" id="szobor-e-b">0</td>
+                <td class="col"><button id="szobor-e-btn" onclick="szoborepites(); pontszamitas()">Építés</button>
+                    <button id="szobor-b-btn" onclick="szoborbontas(); pontszamitas()">Bontás</button>
+                </td>
+            </tr>
+            <tr class="row">
+                <td class="col"><a href="buildings/piac.html">
+                    <img src="https://dshu.innogamescdn.com/asset/1d2499b/graphic/buildings/mid/market2.png" 
+                    title="Piac" alt="" class="bmain_list_img">
+                    Piac</a></td>
+                <td class="col" id="piac-e-b">0</td>
+                <td class="col"><button id="piac-e-btn" onclick="piacepites(); pontszamitas()">Építés</button>
+                    <button id="piac-b-btn" onclick="piacbontas(); pontszamitas()">Bontás</button>
+                </td>
+            </tr>
+            <tr class="row">
+                <td class="col"><a href="buildings/fatelep.html">
+                    <img src="https://dshu.innogamescdn.com/asset/1d2499b/graphic/buildings/mid/wood3.png" 
+                    title="Fatelep" alt="" class="bmain_list_img">
+                    Fatelep</a></td>
+                <td class="col" id="fatelep-e-b">0</td>
+                <td class="col"><button id="fatelep-e-btn" onclick="fatelepepites(); pontszamitas()">Építés</button>
+                    <button id="fatelep-b-btn" onclick="fatelepbontas(); pontszamitas()">Bontás</button>
+                </td>
+            </tr>
+            <tr class="row">
+                <td class="col"><a href="buildings/agyagbanya.html">
+                    <img src="https://dshu.innogamescdn.com/asset/1d2499b/graphic/buildings/mid/stone3.png" 
+                    title="Agyagbánya" alt="" class="bmain_list_img">
+                    Agyagbánya</a></td>
+                <td class="col" id="agyagbanya-e-b">0</td>
+                <td class="col"><button id="agyagbanya-e-btn" onclick="agyagbanyaepites(); pontszamitas()">Építés</button>
+                    <button id="agyagbanya-b-btn" onclick="agyagbanyabontas(); pontszamitas()">Bontás</button>
+                </td>
+            </tr>
+            <tr class="row">
+                <td class="col"><a href="buildings/vasbanya.html">
+                    <img src="https://dshu.innogamescdn.com/asset/1d2499b/graphic/buildings/mid/iron3.png" 
+                    title="Vasbánya" alt="" class="bmain_list_img">
+                    Vasbánya</a></td>
+                <td class="col" id="vasbanya-e-b">0</td>
+                <td class="col"><button id="vasbanya-e-btn" onclick="vasbanyaepites(); pontszamitas()">Építés</button>
+                    <button id="vasbanya-b-btn" onclick="vasbanyabontas(); pontszamitas()">Bontás</button>
+                </td>
+            </tr>
+            <tr class="row">
+                <td class="col"><a href="buildings/tanya.html">
+                    <img src="https://dshu.innogamescdn.com/asset/1d2499b/graphic/buildings/mid/farm3.png" 
+                    title="Tanya" alt="" class="bmain_list_img">
+                    Tanya</a></td>
+                <td class="col" id="tanya-e-b">0</td>
+                <td class="col"><button id="tanya-e-btn" onclick="tanyaepites(); pontszamitas()">Építés</button>
+                    <button id="tanya-b-btn" onclick="tanyabontas(); pontszamitas()">Bontás</button>
+                </td>
+            </tr>
+            <tr class="row">
+                <td class="col"><a href="buildings/raktar.html">
+                    <img src="https://dshu.innogamescdn.com/asset/1d2499b/graphic/buildings/mid/storage3.png" 
+                    title="Raktár" alt="" class="bmain_list_img">
+                    Raktár</a></td>
+                <td class="col" id="raktar-e-b">0</td>
+                <td class="col"><button id="raktar-e-btn" onclick="raktarepites(); pontszamitas()">Építés</button>
+                    <button id="raktar-b-btn" onclick="raktarbontas(); pontszamitas()">Bontás</button>
+                </td>
+            </tr>
+            <tr class="row">
+                <td class="col"><a href="buildings/rejtekhely.html">
+                    <img src="https://dshu.innogamescdn.com/asset/1d2499b/graphic/buildings/mid/hide1.png" 
+                    title="Rejtekhely" alt="" class="bmain_list_img">
+                    Rejtekhely</a></td>
+                <td class="col" id="rejtekhely-e-b">0</td>
+                <td class="col"><button id="rejtekhely-e-btn" onclick="rejtekhelyepites(); pontszamitas()">Építés</button>
+                    <button id="rejtekhely-b-btn" onclick="rejtekhelybontas(); pontszamitas()">Bontás</button>
+                </td>
+            </tr>
+            <tr class="row">
+                <td class="col"><a href="buildings/fal.html">
+                    <img src="https://dshu.innogamescdn.com/asset/1d2499b/graphic/buildings/mid/wall3.png" 
+                    title="Fal" alt="" class="bmain_list_img">
+                    Fal</a></td>
+                <td class="col" id="fal-e-b">0</td>
+                <td class="col"><button id="fal-e-btn" onclick="falepites(); pontszamitas()">Építés</button>
+                    <button id="fal-b-btn" onclick="falbontas(); pontszamitas()">Bontás</button>
+                </td>
+            </tr>
+        </table>
+        <div class="right col-2"></div>
+    </div>
+    
+    <script src="../js/epites-bontas.js"></script>
+    <script src="../js/pontok.js"></script> 
+</body>
+</html>
