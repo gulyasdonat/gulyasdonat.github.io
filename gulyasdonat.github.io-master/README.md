@@ -1,1 +1,0 @@
-# gulyasdonat.github.io
